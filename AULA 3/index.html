@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 03</title>
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+</head>
+<body>
+    <h1> Desafio das imagens </h1>
+    <br>                                            <!-- Pular linha -->
+    <br>                                           
+    <br>
+    <hr>                                            <!-- Cria uma separação (linha) -->
+    <h2> Foto da Cidade de Rio Branco </h2>
+    <img src = "ImgRioBranco.jpeg" alt = "Cidade de Rio Branco.jpeg">
+    <figcaption> Calçadão da Gameleira, Rio Branco </figcaption>
+
+    <picture>
+        <source media = "(max-width: 767px)" srcset = "ImgRioBranco768.jpeg">
+        <source media = "(min-width: 768px)" srcset = "ImgRioBranco.jpeg">
+        <img src= "ImgRioBranco.jpeg" alt = "Cidade de Rio Branco.">
+    </picture>
+
+</body>
+</html>
+
+<!--                       Imagens = JPEG, GIF, PNG 
+
+JPEG = imgens fotográficas, permite a condensação sem perder a qualidade,
+até um certo ponto. Não suporta transparência e pode apresentar pixeis artificiais
+
+PNG = Aceita a tranparência, bom p trabalhar cm ícone, gráficos, também suporta certa condensação 
+Pode ser maior que o JPEG pesando o arquivo.
+
+GIF = gráfico vetorizado, é possivel condensar sem perder a qualidade, e também manipular
+e aplicação de movimento. Complexo de ser criado e editado.
+
+FavIcon = tamanho 16x16 ou 32x32 pixels, serve como marca para o site 
+
+<img src = "Imagem.JPG" alt = "Descrição da imagem" (opcional porém cobrado)>    Comando para add imagem
+<figcaption> Legenda da imagem. </figcaption>
+<picture>
+    <source media = "(max width: 767px)"
+
+
+-->
