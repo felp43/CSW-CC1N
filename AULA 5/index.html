@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA 05</title>
+</head>
+<body>
+    <h1>4 Ferramentas utilizadas na biblioteca</h1>
+    <h2>4.1 Sobre a biblioteca</h2>
+    <h3>4.1.1 O imp</h3>
+    <h3>4.1.2 A biblioteca Ana Bove</h3>
+    <br>
+    <h2>4.2 Diagnóstico tecnológico da Biblioteca Ana Bove</h2>
+    <h3>4.2.1 Cátalogo automático</h3>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h1>Principais formatações</h1>
+    <h2>Negrito / Destaque</h2>
+    Na frase temos uma <b>parte do texto em negrito</b> usando a tag B (não semântica)<br>
+    Na frase temos uma <strong>parte do texto em destaque</strong> usando a tag strong (com semântica)
+    <h2>Itálico / Ênfase</h2>
+    Nesta frase vamos entrar com uma palavra em <i>itálico</i> usando a tag i (não semântica)<br>
+    Nesta frase vamos entrar com uma palavra em <em>itálico</em> usando a tag EM (com semântica)
+    <h2>Texto Marcador</h2>
+    Aqui vamos usar um texto com destaque <mark style="background:green"> de marcador de texto</mark> usando mark<br>
+    Aqui vamos usar um texto com destaque <mark syle="background:yellow"> de marcador de texto</mark> usando mark
+    <h2>Texto grande e pequeno</h2>
+    Estamos trabalhando aqui com um <big>texto grande</big> e um <small>texto pequeno</small> nesta frase
+    <h2>Texto deletado</h2>
+    Neste parágrafo vamos trabalhar com um texto <strike>que foi deletado</strike> da frase (forma não semântica)<br>
+    Neste parágrafo vamos trabalhar com um texto <del>que foi deletado</del> da frase (forma semântica)
+    <h2>Texto inserido</h2>
+    Nesta frase vamos demonstrar como <ins>destacar um texto inserido</ins> na frase de forma semântica<br>
+    Nesta frase vamos demontrar como <u>destacar um texto inserido</u> na frase de forma não semântica
+    <h2>Texto sobrescrito</h2>   
+    Vamos demonstrar uma fórmula de equação do segundo grau ax<sup>2</sup> + bx + c = 0 usando tag sup
+    <h2>Texto subescrito</h2>
+    Vamos demonstrar o texto subescrito com a fórmula da água H<sub>2</sub>O
+    <h2>Trecho de código fonte</h2>
+    Neste exemplo vou demonstrar um trecho de código
+    <pre>
+        <code>
+            resultWorkerErr := make(chan error)
+defer close(resultWorkerErr)
+go func() {
+	defer cancel()
+	resultWorkerErr <- b.resultWorker(ctx)
+}()
+
+err := b.worker(ctx)
+cancel()
+if err == nil {
+	return <-resultWorkerErr
+}
+return multierror.Append(err, <-resultWorkerErr)
+        </code>
+    </pre>
+
+
+
+
+
+    <!--SEMÂNTICA = dar o significado a um vocábulo
+    Mudanças na semântica do HTML do 4 para o 5, passa a valorizar
+    mais a semântica e menos as formas.
+    FORMAS = <u><\u> -> sublinhar
+    SEMÂNTICA = <address><\address> -> oq está dentro faz sentido -> endereço
+    
+    w3c = tags em desuso -> FORMA                   SEMÂNTICO
+                            Italico <i>             <em>
+                            Negrito <b>             <Strong>
+                            Grande <big>            usar no CSS
+                            pequeno <small>         ainda usa
+                            Deletado <striker>      <del>
+                            Inserido <u>            <ins>
+                            Sobrescrito             <sup>
+                            Subscrito               <sub>
+                        
+    -->         
+</body>
+</html>
