@@ -44,21 +44,35 @@
     Neste exemplo vou demonstrar um trecho de código
     <pre>
         <code>
-            resultWorkerErr := make(chan error)
-defer close(resultWorkerErr)
-go func() {
-	defer cancel()
-	resultWorkerErr <- b.resultWorker(ctx)
-}()
+                resultWorkerErr := make(chan error)
+    defer close(resultWorkerErr)
+    go func() {
+        defer cancel()
+        resultWorkerErr <- b.resultWorker(ctx)
+    }()
 
-err := b.worker(ctx)
-cancel()
-if err == nil {
-	return <-resultWorkerErr
-}
-return multierror.Append(err, <-resultWorkerErr)
+    err := b.worker(ctx)
+    cancel()
+    if err == nil {
+        return <-resultWorkerErr
+    }
+    return multierror.Append(err, <-resultWorkerErr)
         </code>
     </pre>
+    <h2>Citação (simples)</h2>
+    Este é um exemplo de uma citação 
+    <blockquote
+        cite="https://querobolsa.com.br/revista/citacoes-para-redacao-sobre-tecnologia#:~:text=1.%C2%A0%E2%80%9CA%20tecnologia,fundador%20da%20Apple.">A tecnologia move o mundo</blockquote>
+    Este é um exemplo de uma citação = <q>A tecnologia move o mundo</q>
+    <h2>Citação (abreviação)</h2>
+    Esta é uma abreviação <acronym title="Instituto Brasileiro De Geografia e Estat ística">IBGE</acronym><br>
+    Esta é uma abreviação <abbr title="Instituto Brasileiro De Geografia e Estatística">IBGE</abbr>
+    <h2>Texto invertido</h2>
+    Este é um <bdo dir="ltr">texto invertido</bdo><br>
+    Este é um <bdo dir="rtl">texto invertido</bdo>
+    <h2>Endereço</h2>
+    Este é um endereço <u>Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ</u> (sublinhando chamando <q>u</q>)<br> 
+    Este é um endereço:<address>Parque Nacional da Tijuca - Alto da Boa Vista, Rio de Janeiro - RJ</address>(idenificador <q>address</q> pula linha)
 
 
 
