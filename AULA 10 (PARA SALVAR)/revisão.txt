@@ -2,65 +2,73 @@
 aula 1
 html e ccs não são linguagens de programação e sim de estilos
 
-html:marcação()
+html:e uma linguagem de marcação()
 
 arquivo html tem uma estrutura padrão idoc
 
-<title>titulo
-    <h1>titulo de conteudo</h1>
+<title>titulo</title>
+    <h1>titulo do conteúdo</h1>
 
     emojis &#x
 
-    computação começou na guerra fria
-    ()criação da internet)arpanet darpa:deparamento de defesa dos estados unidos 
-eles precisavam compartilhar dados então foi criada uma rede
-    tinha somente quatro maquinas eram maquinas de faculdades
-    trazia o problema que so uma maquina podia de se comunicar por vez na troca de pacotes
-    protocolo tcp
+    A internet começou na guerra fria
+    com a criação da arpanet pela darpa: departamento de defesa dos estados unidos  
 
-    tcp ip criada por vinton cerf e  robert kahn
-    substituiu ncp
-    novo nome pra rede
-    internet work(segundo nome da internet)
-cientista Tim Berners criou
-    www=world wide web
-    https
-html
+    NESSECIDADE:
+
+    eles precisavam compartilhar dados então foi criada uma rede que
+    tinha somente quatro maquinas e eram maquinas de faculdades
+
+    PROBLEMA:
+
+    trazia o problema que só uma maquina podia se comunicar por vez na troca de pacotes
+    protocolo ncp
+
+    RESOLUÇÃO:
+
+    tcp ip criada por Vinton Cerf e  Robert Kahn para
+    substituir ncp
+
+    novo nome pra rede internet work(segundo nome da internet)
+
+    Cientista Tim Berners criou
+        www = world wide web
+        https
+        html
 
 
-mosaic primeiro navegador
+    Mosaic foi o primeiro navegador
 
     aula 2
 
-    codigo binario
+    Código binário
     representado pelos algarismos 0 e 1 
     1 quando esta ligado,0 quando esta desligado,esse estado dependia pela passagem de corrente eletrica no transistor
 
-    byte=8bits
-    bit=combinação de 0s e 1s
+    byte = 8bits
+    bit = combinação de 0s e 1s
 
     binario pra hexadecimal e reverso
 
-    oque é um moldem
-    aparelho de modulação ele modela um siina 
+    oque é um moldem = aparelho de modulação ele modela um siina 
 
-    rota caminho de pacote pro servidor pra um cliente
-    em que ofereçe serviços
+    rota = caminho do pacote pro servidor pra um cliente em que ofereçe serviços
 
-    ip endereço que indentifica seua maquina na rede
+    ip = endereço que indentifica seua maquina na rede, identifica os nós d na rede = cliente e servidor
 
-    dns sistema de registro de dominio
+    dns = sistema de registro de dominio, ligado a rede, e converte o nome em um endereço de ip desejado
 
     dominio:seu endereço na intenet:www.uvv
 
-    site dinamico:site que é alterado no momento que faço a requisição
-mesmo site pra todos mas alterado pra cada um
+    site dinamico: Alteração acontece em tempo real ou então site que é alterado no momento que faço a requisição
+    mesmo site pra todos mas alterado pra cada um, o JavaScript tema a capacidade de alterar o html,
+    de acordo com o usuário que o está utilizando
 
-    site statico:site que não sofre alteração
+    site Estatico: O Html o CSS e o JavaScript, ñ mudam, o script do site permaneceo mesmo para todos que acessarem
 
     aula 3
 
-    jpen
+    jpeg
     png 
     gif
 
@@ -69,12 +77,12 @@ mesmo site pra todos mas alterado pra cada um
 
     aula 4
 
-    html meu conteudo(todo meu conteudo)
-    css meu estilo(define letras grande e tudo mais)
+    html = conteudo (todo conteúdo do site).
+    css = estilo (define tamanho das letras e outras coisas).
 
     aula 4
 
-    semantica :da sentido as palavras
+    semantica :Da significado, sentido as palavras, aos vocábulos
 
     exemplo a tag str(strong) pra definir que a palavra a seguir é forte
 
@@ -84,31 +92,31 @@ mesmo site pra todos mas alterado pra cada um
     aula 5
 
     lista
-    <ol type="a" start=5
+    <ol type = "a" start=5>
+        <li>item 1</li>
+        <li>item 2</li>                 LISTA ORDENADA
+    </ol>
 
-    tabela
-    table=border"1"
+    <ul type = "cicle">
+        <li>item 1</li>
+        <li>item 2</li>                LISTA NÃO ORDENADA
+    </ul>
+
+    tabela:
+
+    table = border"1"
 
     comandos 
-    tr
-    td=linhas do corpo
-    th=linhas da cabeça
-    thead=definir o titulo em negrito
-    tbody=definir o corpo
+    tr = pular linha
+    td = linhas do corpo <tbody>
+    th = linhas da cabeça <thead>
+    thead = definir o titulo em negrito
+    tbody = definir o corpo
 
-    mescla de coluna rowspan
-    mescla de linha cowspan
+    mescla de coluna rowspan = expande a coluna
+    mescla de linha cowspan = expande a linha
 
     aula 9
-    href as
-
-
-
-
-
-
-    
-
-
+    <a href = "link buscado"
 
     -->
