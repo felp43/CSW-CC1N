@@ -1,4 +1,4 @@
-h1 {
+#box {
     width: 300px;
     height: 50px;
     border-style: solid;
@@ -11,3 +11,48 @@ h1 {
     margin: 50px;
     text-align: center;
 }
+
+#titulo {
+    color: blue;
+    text-align: center;
+    font-size: 3.5em;
+}
+.titulo2 {
+    color: green;
+    font-size: 2.5em;
+}
+.capitulo1 {
+    color: green;
+    text-align: right;
+}
+.capitulo2 {
+    color: green;
+    text-align: left;
+}
+.parag1 {
+    text-align: justify;
+}
+
+.titulo3 {
+    color: green;
+    font-size: 2em;
+}
+.caixa {
+    color: white;
+    width: 220px;
+    height: 300px;
+    background-color: black;
+    border: 1px solid white;
+    text-align: center;
+}
+div:hover {
+    background-color: aquamarine;
+    text-align: center;
+    margin: 2px;
+    transition: 5s;
+    border: 1px solid black;
+    height: 300px;
+    width: 500px;
+}
+
+
