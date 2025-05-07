@@ -1,0 +1,49 @@
+
+.dados{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+.login{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+h2 {
+    text-align: center;
+}
+.coment{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+.opcoes{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 300px;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+.opcoes1{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
