@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 17</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="processarForm.php" method="get">
+        <div class="container">
+            <div class="dados">
+                <h2>Dados Pessoais</h2>
+                <label for="">Nome</label>
+                <input type="text" name="nome-usuário" id="nome-usuário01" size="30" maxlength="40"
+                value=""
+                placeholder="Digite seu nome" required>
+                <br>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required
+                value=""
+                placeholder="Digite seu email"><br>
+                <br>
+                <label for="Idade">Idade:</label>
+                <input type="number" id="Idade" name="Idade"><br><br>
+                <label for="email">E-mail (patter):</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="">Escolha uma cor:</label>
+                <select name="cor" id=""> 
+                    <input type="color" name="" id=""><br><br>
+                </select>
+                Data e Hora: <input type="datetime-local" name="dtlocal" id="dt-local">
+            </div>
+        <br>
+        <br>
+        <br> 
+        <div class="item-1">
+            <div class="login">
+                <h2>Login</h2>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+                <label for="Senha">Senha
+                <input type="password" name="senha" id="senha">
+                </label>
+            </div>
+        </div>
+        <div class="item-2">
+            <div class="coment">
+                <p>Digite seu comentário</p>
+                <textarea name="comentário" id="" cols="35" rows="5" 
+                placeholder="Escreva aqui um comentário"></textarea><br>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container_op">
+            <div class="opcoes">
+                <input type="checkbox" name="opção 1">Opção 1
+                <br>
+                <input type="checkbox" name="Opção 2">Opção 2
+                <br>
+                <input type="checkbox" name="Opção 2">Opção 3
+            </div>
+            <div class="opcoes">
+                Opção 1<input type="radio" name="opção 1" value=""><br>
+                Opção 2<input type="radio" name="opção 1" value=""><br>
+                Opção 3<input type="radio" name="opção 1" value=""><br>
+            </div>
+        <br>
+        <br>
+        <div class="opcoes1">
+            <label for="">Esporte favorito:</label>
+            <select name="esportes" id="">
+                <option value="">Selecione</option>
+                <option value="Futebol">Futebol</option>
+                <option value="Vôlei">Vôlei</option>
+                <option value="Basquete">Basquete</option>
+            </select>
+        </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container_but">
+        <input type="submit" value="enviar e-mail">
+
+        <input type="reset" value="limpar">
+        
+        <input type="button" value="voltar">
+        </div>
+    </form>
+    </div>
+</body>
+</html>
+</body>
+</html>

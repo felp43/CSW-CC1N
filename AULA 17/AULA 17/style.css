@@ -1,0 +1,73 @@
+
+.dados{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 450px;
+    text-align: center;
+}
+.login{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+}
+.coment{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+}
+.opcoes{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: space-between;    
+    height: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+    .item-1 {
+        align-self: flex-start;
+    }
+    .item-2 {
+        align-self: flex-start;
+    }
+.opcoes1{
+    border: 2px solid black;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+.container_op {
+    display: flex;
+    justify-content: space-around;
+    align-content: baseline;
+    height: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    }
+.container_but{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    height: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-end;
+}
