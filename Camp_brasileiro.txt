@@ -1,0 +1,30 @@
+/*Qual a média de pontos dos campeões brasileiros nessas edições?*/
+select round(avg("Pontos"),1) from data_camp_brasileiro where "Posicao" = 1;
+
+/*Quantos Clubes Brasileiros diferentes participaram da primeira divisão do campeonato brasileiro?*/
+select distinct "Time" from data_camp_brasileiro;
+
+/*Quais clubes brasileiros participaram em todas as 10 últimas edições do campeonato brasileiro?*/
+select ("Time") from data_camp_brasileiro
+	group by "Time" having count (*) = 10;
+
+/*Qual clube brasileiro foi mais vezes vice-campeão brasileiro neste período de 2009 a 2018?*/
+select "Time", count(*) from data_camp_brasileiro
+	where "Posicao" = 2 group by "Time"
+	having count(*) = (select max(vice) from
+						(select count(*) vice
+						from data_camp_brasileiro
+						where "Posicao" = 2
+							group by "Time"));
+
+/*Qual/quais time(s) ficaram entre os 4 primeiros colocados, tendo 65 pontos, contabilizando 18 vitórias e apenas 9 derrotas?*/
+select * from data_camp_brasileiro
+	where "Pontos" = 65 and "Vitoria" = 18 and "Derrotas" = 9 and "Posicao" < 5
+
+/*Qual clube brasileiro teve aproveitamento de 50% e ficou com melhor colocado em uma edição do campeonato brasileiro.*/
+SELECT "Time", "ANO", "Posicao" 
+from data_camp_brasileiro WHERE "Aproveitamento" = 50
+AND "Posicao" = (SELECT min("Posicao") from (SELECT "Posicao" FROM data_camp_brasileiro WHERE "Aproveitamento" = 50));
+
+/*Quantos gols o VASCÃO fez em todas as edições do campeonato que participou?*/
+SELECT SUM("Gols pro") FROM data_camp_brasileiro WHERE "Time" ILIKE '%vasco%';
