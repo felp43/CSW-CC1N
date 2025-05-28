@@ -1,0 +1,25 @@
+/*Qual clube brasileiro foi campeão como o maior saldo de gols feitos de todas as 10 edições do campeonato.*/
+SELECT "Time","Saldo Gols" from data_camp_brasileiro where "Posicao" = 1 AND 
+	"Saldo Gols" = (SELECT MAX("Saldo Gols") from (SELECT "Saldo Gols" from data_camp_brasileiro where "Posicao" = 1));
+
+
+/*Qual clube brasileiro foi campeão como o maior saldo de gols tomados de todas as 10 edições do campeonato.*/
+SELECT "Time","Gols Contra" from data_camp_brasileiro WHERE "Posicao" = 1 AND
+	"Gols Contra" = (SELECT max("Gols Contra") from (SELECT "Gols Contra" from data_camp_brasileiro where "Posicao" = 1));
+
+
+/*Quantos gols o Cruzeiro sofreu em todas as edições do campeonato que participou?*/
+SELECT SUM("Gols Contra") FROM data_camp_brasileiro WHERE "Time" ILIKE '%cruzeiro%';
+
+
+/*Qual é a média de gols feitos dos times do estado do Rio Grande do Sul no ano de 2014?*/
+SELECT round(AVG("Gols pro"),1) from data_camp_brasileiro WHERE "Estados" ILIKE '%RS%' and "ANO" = 2014;
+
+
+/*Qual é a média de gols feitos dos times do estado do Rio de Janeiro no ano de 2012?*/
+SELECT round(AVG("Gols pro"),1) from data_camp_brasileiro WHERE "Estados" ILIKE '%RJ%' and "ANO" = 2012;
+
+
+/*Qual é o recorde de derrotas de um time em uma das edições do campeonato brasileiro. Informe o time, ano e a quantidade de derrotas?*/
+select "Time", "ANO", "Derrotas" from data_camp_brasileiro where 
+	"Derrotas" = (SELECT max("Derrotas") from data_camp_brasileiro);
