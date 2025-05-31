@@ -1,16 +1,25 @@
-select j.rodada, g.clube, g.atleta, g.minuto, j.data from gols g
+select j.rodada, g.clube, g.atleta, g.minuto from gols g
 	inner join jogos j on g.partida_id = j.id
-	where j.rodada = 36 and j.data = '2016-10-11' and j.mandante = 'Corinthians'
-	and j.visitante = 'Sao Paulo';
+	where j.rodada = 36 and j.mandante ilike '%Corinthians%' and j.visitante ilike '%Sao Paulo%'
+	and data = '2016-10-11';
+
+
+select j.vencedor, j.visitante, (j.mandante_placar, 'x' ,j.visitante_placar), j.arena, j.data
+	from jogos j
+	where j.data between '2024-01-01' and '2024-12-31' and j.vencedor = j.mandante and j.vencedor ilike '%Vasco%' and j.arena ilike '%Estádio São Januário%';
 	
-	select j.vencedor, j.arena, j.visitante, (j.mandante_placar, ' x ' ,j.visitante_placar) as placar_final, j.data as placar_final
-	from jogos j 
-	where vencedor ilike '%Vasco%' and j.data between '2024-01-01' and '2024-12-31' and arena ilike '%Estádio São Januário%'
-	
-	select j.rodada, j.mandante, e.chutes, e.chutes_no_gol, j.data from estatisticas e
+
+select e.clube, e.chutes, e.chutes_no_gol, j.data from estatisticas e
 	inner join jogos j on e.partida_id = j.id
-	where (j.rodada between 10 and 13 or j.rodada = 15) and j.data between '2019-01-01' and '2019-12-31'
-	and j.mandante = e.clube;
-	
-	select g.atleta, g.clube, j.arena from gols g
+	where (j.rodada between 10 and 13 or j.rodada = 15) and e.clube = j.mandante and j.data between '2019-01-01' and '2019-12-31';
+
+
+select g.atleta, g.clube, j.arena, j.data from gols g
 	inner join jogos j on g.partida_id = j.id
+	where j.data between '2020-01-01' and '2020-12-31';
+
+
+SELECT c.atleta,c.clube, c.minuto, jm.tecnico_mandante as tecnico_mandante, jv.tecnico_visitante AS tecnico_visitante
+	FROM cartoes c
+	LEFT JOIN jogos jm ON c.partida_id = jm.id AND c.clube = jm.mandante
+	LEFT JOIN jogos jv ON c.partida_id = jv.id AND c.clube = jv.visitante;
