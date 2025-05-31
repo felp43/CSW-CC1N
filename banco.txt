@@ -1,0 +1,16 @@
+select j.rodada, g.clube, g.atleta, g.minuto, j.data from gols g
+	inner join jogos j on g.partida_id = j.id
+	where j.rodada = 36 and j.data = '2016-10-11' and j.mandante = 'Corinthians'
+	and j.visitante = 'Sao Paulo';
+	
+	select j.vencedor, j.arena, j.visitante, (j.mandante_placar, ' x ' ,j.visitante_placar) as placar_final, j.data as placar_final
+	from jogos j 
+	where vencedor ilike '%Vasco%' and j.data between '2024-01-01' and '2024-12-31' and arena ilike '%Estádio São Januário%'
+	
+	select j.rodada, j.mandante, e.chutes, e.chutes_no_gol, j.data from estatisticas e
+	inner join jogos j on e.partida_id = j.id
+	where (j.rodada between 10 and 13 or j.rodada = 15) and j.data between '2019-01-01' and '2019-12-31'
+	and j.mandante = e.clube;
+	
+	select g.atleta, g.clube, j.arena from gols g
+	inner join jogos j on g.partida_id = j.id
