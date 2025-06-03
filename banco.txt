@@ -4,19 +4,19 @@ select j.rodada, g.clube, g.atleta, g.minuto from gols g
 	and data = '2016-10-11';
 
 
-select j.vencedor, j.visitante, (j.mandante_placar, 'x' ,j.visitante_placar), j.arena, j.data
+select j.vencedor, j.visitante, concat(j.mandante_placar, 'x' ,j.visitante_placar) as placar, j.arena, j.data
 	from jogos j
-	where j.data between '2024-01-01' and '2024-12-31' and j.vencedor = j.mandante and j.vencedor ilike '%Vasco%' and j.arena ilike '%Estádio São Januário%';
+	where extract (year from j.data) = '2024' and j.vencedor = j.mandante and j.vencedor ilike '%Vasco%' and j.arena ilike '%São Januário%';
 	
 
 select e.clube, e.chutes, e.chutes_no_gol, j.data from estatisticas e
 	inner join jogos j on e.partida_id = j.id
-	where (j.rodada between 10 and 13 or j.rodada = 15) and e.clube = j.mandante and j.data between '2019-01-01' and '2019-12-31';
+	where (j.rodada between 10 and 13 or j.rodada = 15) and e.clube = j.mandante and extract (year from j.data) = '2019';
 
 
 select g.atleta, g.clube, j.arena, j.data from gols g
 	inner join jogos j on g.partida_id = j.id
-	where j.data between '2020-01-01' and '2020-12-31';
+	where extract (year from j.data) = '2020';
 
 
 SELECT c.atleta,c.clube, c.minuto, jm.tecnico_mandante as tecnico_mandante, jv.tecnico_visitante AS tecnico_visitante
