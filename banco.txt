@@ -23,3 +23,22 @@ SELECT c.atleta,c.clube, c.minuto, jm.tecnico_mandante as tecnico_mandante, jv.t
 	FROM cartoes c
 	LEFT JOIN jogos jm ON c.partida_id = jm.id AND c.clube = jm.mandante
 	LEFT JOIN jogos jv ON c.partida_id = jv.id AND c.clube = jv.visitante;
+
+
+SELECT j.data, c.atleta,c.clube, c.minuto, j.tecnico_mandante as tecnico
+	FROM cartoes c
+	LEFT JOIN jogos j ON c.partida_id = j.id AND c.clube = j.mandante
+	where extract (year from j.data) = '2018';
+
+
+SELECT j.clube, SUM(g.total_gols) AS total_gols_marcados, SUM(e.chutes_no_gol) AS total_chutes_a_gol
+	FROM ( SELECT DISTINCT mandante AS clube FROM jogos
+			WHERE rodada = 5 UNION SELECT DISTINCT visitante AS clube FROM jogos
+				WHERE rodada = 5) AS j
+	LEFT JOIN ( SELECT clube, COUNT(*) AS total_gols FROM gols
+					WHERE rodada = 5 GROUP BY clube) AS g
+			ON j.clube = g.clube
+	LEFT JOIN ( SELECT clube, SUM(chutes_no_gol) AS chutes_no_gol
+				FROM estatisticas
+					WHERE rodada = 5 GROUP BY clube) AS e
+			ON j.clube = e.clube GROUP BY j.clube ORDER BY total_gols_marcados DESC;
