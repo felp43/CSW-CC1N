@@ -19,16 +19,11 @@ select g.atleta, g.clube, j.arena, j.data from gols g
 	where extract (year from j.data) = '2020';
 
 
-SELECT c.atleta,c.clube, c.minuto, jm.tecnico_mandante as tecnico_mandante, jv.tecnico_visitante AS tecnico_visitante
-	FROM cartoes c
-	LEFT JOIN jogos jm ON c.partida_id = jm.id AND c.clube = jm.mandante
-	LEFT JOIN jogos jv ON c.partida_id = jv.id AND c.clube = jv.visitante;
-
-
-SELECT j.data, c.atleta,c.clube, c.minuto, j.tecnico_mandante as tecnico
-	FROM cartoes c
-	LEFT JOIN jogos j ON c.partida_id = j.id AND c.clube = j.mandante
-	where extract (year from j.data) = '2018';
+select ca.atleta, ca.clube, ca.minuto, jm.tecnico_mandante, jv.tecnico_visitante, jm.data
+	from cartoes ca
+    left join jogos jm on ca.partida_id = jm.id and ca.clube = jm.mandante
+    LEFT join jogos jv on ca.partida_id = jv.id and ca.clube = jv.visitante
+    where EXTRACT(year from jm.data) = '2018';
 
 
 SELECT j.clube, SUM(g.total_gols) AS total_gols_marcados, SUM(e.chutes_no_gol) AS total_chutes_a_gol
